@@ -1,0 +1,234 @@
+/* Body */
+body {
+  background-color: #f0ebe4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+body, html {
+  height: 100%;
+}
+
+/* Sidebar Panel*/
+.sidebar {
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #d6c4b0;
+  overflow-x: hidden;
+  transition: 1s;
+  padding-top: 100px;
+  animation: fadeIn 3s ease forwards;
+}
+.sidebar a {
+  padding: 10px 10px 10px 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display:block;
+  animation: fadeIn 3s ease forwards;
+}
+.sidebar a:hover {
+color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+}
+
+.openbtn {
+font-size: 20px;
+height: 8vh;
+width: 20vh;
+cursor: pointer;
+position: fixed;
+background-color: #d6c4b0;
+color: #364f6b;
+margin: 10px 0px 0px 20px;
+border: none;
+border-radius: 12%;
+animation: fadeIn 3s ease forwards;
+}
+
+.openbtn:hover {
+background-color:#f1f1f1;
+}
+
+/* style Formulir */
+.container {
+  max-width: 800px;
+  width: 500px;
+  height: 500px; 
+  margin: 80px auto; 
+  background-color: #d6c4b0;
+  padding: 50px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  animation: fadeIn 5s ease forwards;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px; /* Beri jarak yang cukup di bawah judul */
+  font-size: 25px;
+  font-family: 'comic sans ms';
+}
+label {
+  font-family:'Segoe UI';
+  display: block;
+  margin-bottom: 5px; 
+  font-weight: bold;
+}
+input, select, button {
+  width: 100%;
+  padding: 10px; 
+  margin-bottom: 15px;
+  border-radius: 5px;
+  position:static;
+  border: 1px solid #d6c4b0;
+}
+button {
+  font-size: 20px;
+  background-color: #4CAF50;
+  align-items: center ;
+  width: 20%;
+  margin-left: 400px;
+  color: rgb(232, 237, 233);
+  cursor: pointer;
+}
+button:hover {
+  background-color: #b44f23;
+  transition: cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+label .fa {
+  margin-right: 8px; /* Atur jarak antara ikon dan teks */
+}
+
+
+/* Animasi fade-in untuk seluruh elemen */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+@keyframes fadeInText {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+@keyframes fadeInButton {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+@keyframes fadeInLogo {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 1200px) {
+  .wrapper {
+      width: 90%;
+  }
+  
+  .kolom p {
+      margin: 30px 50px;
+      max-width: 100%;
+  }
+  
+  img {
+      width: 70%;
+      margin-left: 15%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+      font-size: 35px;
+      line-height: 40px;
+  }
+  
+  .kolom p {
+      font-size: 18px;
+      margin: 20px;
+  }
+  
+  .openbtn {
+      width: 15vh;
+      height: 6vh;
+      font-size: 16px;
+  }
+  
+  img {
+      width: 90%;
+      margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+      font-size: 28px;
+      line-height: 32px;
+      margin: 10px;
+  }
+  
+  .kolom p {
+      font-size: 16px;
+      margin: 15px;
+      text-indent: 20px;
+  }
+  
+  .openbtn {
+      width: 12vh;
+      height: 5vh;
+      font-size: 14px;
+      margin: 5px 0px 0px 10px;
+  }
+  
+  .sidebar {
+      padding-top: 60px;
+  }
+  
+  .sidebar a {
+      font-size: 20px;
+      padding: 8px 8px 8px 16px;
+  }
+}
+
+/* For very small devices */
+@media screen and (max-width: 320px) {
+  h1 {
+      font-size: 24px;
+  }
+  
+  .kolom p {
+      font-size: 14px;
+      margin: 10px;
+  }
+}

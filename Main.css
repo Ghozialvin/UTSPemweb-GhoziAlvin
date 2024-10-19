@@ -1,0 +1,317 @@
+/* Body */
+body {
+    background-color: #f0ebe4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+body, html {
+    height: 100%;
+}
+
+/* Sidebar Panel*/
+.sidebar {
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #d6c4b0;
+    overflow-x: hidden;
+    transition: 1s;
+    padding-top: 100px;
+    animation: fadeIn 3s ease forwards;
+}
+.sidebar a {
+    padding: 10px 10px 10px 20px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display:block;
+    animation: fadeIn 3s ease forwards;
+}
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  height: 8vh;
+  width: 20vh;
+  cursor: pointer;
+  position: fixed;
+  background-color: #d6c4b0;
+  color: #364f6b;
+  margin: 10px 0px 0px 20px;
+  border: none;
+  border-radius: 12%;
+  animation: fadeIn 3s ease forwards;
+}
+
+.openbtn:hover {
+  background-color:#f1f1f1;
+}
+
+/* Bagian Content */
+.wrapper {
+    width: 1100px;
+    margin: auto;
+    position: relative;
+    font-optical-sizing:auto;
+    animation: fadeIn 3s ease forwards;
+}
+.deskripsi .kolom {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Permanent Marker", "cursive";
+    font-optical-sizing:auto;
+    color: #364f6b;
+    animation: fadeIn 3s ease forwards;
+}
+h1 {
+    font-family: "Permanent Marker", "cursive";
+    font-weight: 800;
+    font-size: 45px;
+    font-optical-sizing:auto;
+    margin: 20px 20px 20px 20px;
+    color: #364f6b;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+    animation: fadeIn 3s ease forwards;
+}
+.kolom p{
+    font-size: 24px;
+    color: #555;
+    text-align:justify;
+    text-indent: 30px;
+    line-height: 1.5;
+    font-optical-sizing:auto;
+    max-width: 900px;
+    margin: 50px 110px 50px 110px;
+    animation: fadeIn 3s ease forwards;
+}
+img {
+    width: 50%;
+    height: 50%;
+    position:relative;
+    text-decoration:none;
+    margin-top: 10px;
+    margin-left: 30%;
+    margin-right: 0%;
+    margin-bottom:10px ;
+    padding: 0px;
+    border-radius: 10%;
+    animation: fadeIn 3s ease forwards;
+}
+.gambar .img{
+    width: 200%;
+    height: 50%;
+    margin: 10px 10px 10px 10px;
+    animation: fadeIn 3s ease forwards;
+}
+.text .p{
+    font-size: 50px;
+}
+
+/* Bagian untuk ikon media sosial */
+.social-media a {
+    position: fixed;
+    right: -80px;  
+    transition: 1s; 
+    padding: 15px;
+    width: 120px;
+    align-items: center;
+    text-align: center;
+    margin: 20px 20px 20px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+    animation: fadeIn 3s ease forwards;
+}
+
+.social-media a:hover {
+    right: 10px; 
+}
+
+/* Posisi dan warna tombol */
+.twiter {
+    padding: 50px;
+    top: 280px;  
+    background-color: #14171A;
+    align-items: center;
+}
+
+.instagram {
+    top: 340px; 
+    background: #833ab4;
+    background: linear-gradient(to right,
+    #833ab4,#fd1d1d,#fcb045);
+    padding: 50px;
+    align-items: center;
+}
+
+.facebook {
+    top: 400px;  
+    align-items: center;
+    padding: 50px;
+    background-color: #4267B2;
+}
+
+.youtube {
+    top: 460px;  
+    align-items: center;
+    padding: 50px;
+    background-color: #FF0000;
+}
+/* Animasi fade-in untuk seluruh elemen */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInButton {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInLogo {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 1200px) {
+    .wrapper {
+        width: 90%;
+    }
+    
+    .kolom p {
+        margin: 30px 50px;
+        max-width: 100%;
+    }
+    
+    img {
+        width: 70%;
+        margin-left: 15%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 35px;
+        line-height: 40px;
+    }
+    
+    .kolom p {
+        font-size: 18px;
+        margin: 20px;
+    }
+    
+    .openbtn {
+        width: 15vh;
+        height: 6vh;
+        font-size: 16px;
+    }
+    
+    img {
+        width: 90%;
+        margin-left: 5%;
+    }
+    
+    .social-media a {
+        width: 100px;
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+        line-height: 32px;
+        margin: 10px;
+    }
+    
+    .kolom p {
+        font-size: 16px;
+        margin: 15px;
+        text-indent: 20px;
+    }
+    
+    .openbtn {
+        width: 12vh;
+        height: 5vh;
+        font-size: 14px;
+        margin: 5px 0px 0px 10px;
+    }
+    
+    .sidebar {
+        padding-top: 60px;
+    }
+    
+    .sidebar a {
+        font-size: 20px;
+        padding: 8px 8px 8px 16px;
+    }
+    
+    .social-media a {
+        width: 80px;
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    .twiter, .instagram, .facebook, .youtube {
+        padding: 30px;
+    }
+}
+
+/* For very small devices */
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 24px;
+    }
+    
+    .kolom p {
+        font-size: 14px;
+        margin: 10px;
+    }
+    
+    .social-media a {
+        width: 70px;
+        font-size: 12px;
+    }
+}
